@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-5">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    Product List
+                </div>
+                <ul class="list-group list-group-flush list-item-pr">
+                    <li class="list-group-item" *ngFor="let product of products()" (click)="onSelectProduct(product.id)"
+                        [ngClass]="product.id === selectedProduct()?.id ? 'active':''"> {{product?.name}}
+                        (<b>${{product?.price}}</b> qty - {{product?.availbleQuantity}})</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-7">
+            <div *ngIf="selectedProduct()">
+                <app-product-details [data]="selectedProduct"></app-product-details>
+            </div>
+        </div>
+    </div>
+</div>

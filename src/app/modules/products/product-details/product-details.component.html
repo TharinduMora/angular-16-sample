@@ -1,0 +1,12 @@
+<div class="card mb-2">
+    <div class="card-header">
+        {{data()?.name}}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">$ {{data()?.price}}</h5>
+        <p class="card-text">Quantity Availble - {{data()?.availbleQuantity}}</p>
+        <button class="btn btn-primary mr-2" (click)="addToCart()">Add to Cart</button>
+        <button class="btn btn-primary mr-2" (click)="increaseQuantity()">+</button>
+        <button class="btn btn-primary" (click)="decreaseQuantity()">-</button>
+    </div>
+</div>

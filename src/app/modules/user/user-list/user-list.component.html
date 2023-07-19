@@ -1,0 +1,5 @@
+<!-- <p *ngFor="let userObj of userObjList">{{userObj | json}}</p> -->
+
+<div *ngFor="let userObj of userObjList;trackBy:identify">
+    <app-user-tile [data]="userObj" (clicked)="onClickTile($event)"></app-user-tile>
+</div>
