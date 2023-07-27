@@ -1,9 +1,9 @@
 <div class="card-header">
-    {{item?.product?.name}}
+    {{item.product.name}}
 </div>
 <div class="card-body">
-    <h5 class="card-title">$ {{item?.product?.price}}</h5>
-    <p class="card-text">Quantity {{item?.quantity}}</p>
+    <h5 class="card-title">$ {{item.product.price}}</h5>
+    <p class="card-text">Quantity {{item.quantity}}</p>
     <button class="btn btn-primary mr-2" (click)="increaseQuantity()">+</button>
     <button class="btn btn-danger mr-2" (click)="decreaseQuantity()">-</button>
     <button class="btn btn-danger mr-2" (click)="remveFromCart()">Remove</button>

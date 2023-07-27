@@ -6,21 +6,19 @@ import { AppComponent } from './app.component';
 import { NgxsModule } from '@ngxs/store';
 import { AppState } from './store/app.state';
 import { HttpClientModule } from '@angular/common/http';
-import { ProductListComponent } from './modules/products/product-list/product-list.component';
+import { AuthState } from './store/auth/auth.state';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxsModule.forRoot([AppState], {
-      developmentMode: true
+    NgxsModule.forRoot([AppState, AuthState], {
+      developmentMode: true,
     }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
