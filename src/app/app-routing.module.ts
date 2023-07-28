@@ -36,6 +36,11 @@ const routes: Routes = [
             (mod) => mod.CartLandingComponent
           ),
       },
+      {
+        path: 'rxjs',
+        loadChildren: () =>
+          import('./modules/rxjs/rxjs.module').then((mod) => mod.RxjsModule),
+      },
     ],
   },
 ];
