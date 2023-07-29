@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RxjsTabComponent } from './rxjs-tab/rxjs-tab.component';
 import { RouterModule } from '@angular/router';
-import { MapsComponent } from './maps/maps.component';
 import { FormsModule } from '@angular/forms';
+import { BasicComponent } from './basic/basic.component';
+import { Demo1Component } from './demo1/demo1.component';
+import { OperatorsComponent } from './operators/operators.component';
 
 @NgModule({
-  declarations: [RxjsTabComponent, MapsComponent],
+  declarations: [RxjsTabComponent, BasicComponent, Demo1Component, OperatorsComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -15,11 +17,13 @@ import { FormsModule } from '@angular/forms';
         path: '',
         component: RxjsTabComponent,
         children: [
-          { path: 'maps', component: MapsComponent },
-          { path: '', redirectTo: 'maps', pathMatch: 'full' },
+          { path: 'basic', component: BasicComponent },
+          { path: 'demo1', component: Demo1Component },
+          { path: 'operators', component: OperatorsComponent },
+          { path: '', redirectTo: 'basic', pathMatch: 'full' },
         ],
       },
     ]),
   ],
 })
-export class RxjsModule {}
+export class RxjsModule { }

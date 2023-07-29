@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./rxjs-tab.component.css']
 })
 export class RxjsTabComponent {
-
+  // TODO
+  // event handlers
+  // promises
+  // callbacks
+  // forms - reactive / template driven
 }
