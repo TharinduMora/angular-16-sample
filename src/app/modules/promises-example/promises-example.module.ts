@@ -1,18 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PromisesExampleComponent } from './promises-example/promises-example.component';
-import { RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
 
 @NgModule({
-  declarations: [PromisesExampleComponent],
-  imports: [
-    CommonModule,
-    RouterModule.forChild([
-      {
-        path: '',
-        component: PromisesExampleComponent,
-      },
-    ]),
-  ],
+  declarations: [],
+  imports: [CommonModule],
 })
 export class PromisesExampleModule {}

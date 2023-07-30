@@ -42,11 +42,9 @@ const routes: Routes = [
           import('./modules/rxjs/rxjs.module').then((mod) => mod.RxjsModule),
       },
       {
-        path: 'promises',
+        path: 'async',
         loadChildren: () =>
-          import('./modules/promises-example/promises-example.module').then(
-            (mod) => mod.PromisesExampleModule
-          ),
+          import('./modules/async/async.module').then((mod) => mod.AsyncModule),
       },
     ],
   },
