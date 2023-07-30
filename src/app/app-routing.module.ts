@@ -41,6 +41,13 @@ const routes: Routes = [
         loadChildren: () =>
           import('./modules/rxjs/rxjs.module').then((mod) => mod.RxjsModule),
       },
+      {
+        path: 'promises',
+        loadChildren: () =>
+          import('./modules/promises-example/promises-example.module').then(
+            (mod) => mod.PromisesExampleModule
+          ),
+      },
     ],
   },
 ];
