@@ -1,0 +1,41 @@
+<form (ngSubmit)="addProduct()" [formGroup]="productForm">
+  <input
+    formControlName="id"
+    type="text"
+    class="form-control"
+    placeholder="Enter ID"
+  />
+  <input
+    formControlName="name"
+    type="text"
+    class="form-control"
+    placeholder="Enter Product Name"
+  />
+  <input
+    formControlName="price"
+    type="number"
+    class="form-control"
+    placeholder="Enter Price"
+  />
+  <input
+    formControlName="availbleQuantity"
+    type="number"
+    class="form-control"
+    placeholder="Enter Quantity "
+    [ngClass]="
+      f.availbleQuantity.touched && f.availbleQuantity.invalid
+        ? 'is-invalid'
+        : ''
+    "
+  />
+  <div *ngIf="f.availbleQuantity.touched && f.availbleQuantity.invalid">
+    <small *ngIf="f.availbleQuantity.errors?.required"
+      >This field is required</small
+    >
+    <small *ngIf="f.availbleQuantity.errors?.min">Invalid Quantity</small>
+  </div>
+  <!-- <button [disabled]="productForm.invalid" class="btn btn-primary"> -->
+  <button class="btn btn-primary">
+    {{ selectedProduct ? "Update" : "Add" }} Product
+  </button>
+</form>

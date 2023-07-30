@@ -26,11 +26,13 @@ export class AuthState {
     private ngZone: NgZone
   ) {}
 
+  // @ts-ignore
   @Selector()
   static isLoggedIn(state: AuthStateModel): boolean {
     return state.isLoggedIn;
   }
 
+  // @ts-ignore
   @Action(Login)
   async login(ctx: StateContext<AuthStateModel>, action: Login) {
     return this.authService.login(action.email, action.password).pipe(
@@ -51,6 +53,7 @@ export class AuthState {
     );
   }
 
+  // @ts-ignore
   @Action(Logout)
   async logout(ctx: StateContext<AuthStateModel>, action: Logout) {
     ctx.setState({ isLoggedIn: false });

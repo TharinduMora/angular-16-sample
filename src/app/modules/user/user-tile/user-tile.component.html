@@ -1,4 +1,4 @@
 <div>
-    Name : {{data.first_name}}
-    <button (click)="onClick()">Click Me</button>
+  Name : {{ data?.first_name || "" }}
+  <button (click)="onClick()">Click Me</button>
 </div>
