@@ -6,9 +6,10 @@ import { FormsModule } from '@angular/forms';
 import { BasicComponent } from './basic/basic.component';
 import { Demo1Component } from './demo1/demo1.component';
 import { OperatorsComponent } from './operators/operators.component';
+import { SubjectsComponent } from './subjects/subjects.component';
 
 @NgModule({
-  declarations: [RxjsTabComponent, BasicComponent, Demo1Component, OperatorsComponent],
+  declarations: [RxjsTabComponent, BasicComponent, Demo1Component, OperatorsComponent, SubjectsComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -20,7 +21,8 @@ import { OperatorsComponent } from './operators/operators.component';
           { path: 'basic', component: BasicComponent },
           { path: 'demo1', component: Demo1Component },
           { path: 'operators', component: OperatorsComponent },
-          { path: '', redirectTo: 'basic', pathMatch: 'full' },
+          { path: 'subjects', component: SubjectsComponent },
+          { path: '', redirectTo: 'subjects', pathMatch: 'full' },
         ],
       },
     ]),
