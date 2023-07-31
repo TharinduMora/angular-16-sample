@@ -12,16 +12,24 @@ import { Logout } from '../../../store/auth/auth.actions';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  constructor(private store: Store) {}
+  constructor(private store: Store) { }
   subscription!: Subscription;
   userList!: IUser[];
 
   ngOnInit() {
+    this.testVariables()
     this.subscription = this.store
       .select(AppState.getUserList)
       .subscribe((res) => {
         this.userList = res;
       });
+  }
+
+  testVariables() {
+    const aaa = { id: 1, value: 'a' };
+    aaa.id = 2;
+    console.log(aaa);
+
   }
 
   fetchUsers() {

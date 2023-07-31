@@ -7,6 +7,7 @@ import { NgxsModule } from '@ngxs/store';
 import { AppState } from './store/app.state';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthState } from './store/auth/auth.state';
+import { DirectiveModule } from './core/directives/directive.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,6 +15,7 @@ import { AuthState } from './store/auth/auth.state';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    DirectiveModule,
     NgxsModule.forRoot([AppState, AuthState], {
       developmentMode: true,
     }),
@@ -21,4 +23,4 @@ import { AuthState } from './store/auth/auth.state';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

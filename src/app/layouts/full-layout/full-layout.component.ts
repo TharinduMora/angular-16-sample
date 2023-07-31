@@ -9,4 +9,4 @@ import { RouterModule } from '@angular/router';
   templateUrl: './full-layout.component.html',
   styleUrls: ['./full-layout.component.css'],
 })
-export class FullLayoutComponent {}
+export class FullLayoutComponent { }
