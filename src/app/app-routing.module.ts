@@ -46,6 +46,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./modules/async/async.module').then((mod) => mod.AsyncModule),
       },
+      {
+        path: 'change-detection',
+        loadChildren: () =>
+          import('./modules/change-detection/change-detection.module').then((mod) => mod.ChangeDetectionModule),
+      },
     ],
   },
 ];
@@ -54,4 +59,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
